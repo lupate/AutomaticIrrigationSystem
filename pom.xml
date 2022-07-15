@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>automaticirrigationsystem</artifactId>
+
+  <!-- ====================================================================== -->
+  <!-- = P R O J E C T  ===================================================== -->
+  <!-- ====================================================================== -->
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <artifactId>lombok</artifactId>
+              <groupId>org.projectlombok</groupId>
+            </exclude>
+          </excludes>
+        </configuration>
+        <groupId>org.springframework.boot</groupId>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-validation</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>liquibase-core</artifactId>
+      <groupId>org.liquibase</groupId>
+    </dependency>
+
+    <dependency>
+      <artifactId>h2</artifactId>
+      <groupId>com.h2database</groupId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <artifactId>mapstruct</artifactId>
+      <groupId>org.mapstruct</groupId>
+      <version>1.5.1.Final</version>
+    </dependency>
+    <dependency>
+      <artifactId>mapstruct-processor</artifactId>
+      <groupId>org.mapstruct</groupId>
+      <scope>provided</scope>
+      <version>1.5.1.Final</version>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <groupId>org.springdoc</groupId>
+      <version>1.6.9</version>
+    </dependency>
+  </dependencies>
+  <description>Automatic Irrigation System</description>
+
+  <groupId>com.ais</groupId>
+  <inceptionYear>2022</inceptionYear>
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <!-- ====================================================================== -->
+  <!-- = P A R E N T ======================================================== -->
+  <!-- ====================================================================== -->
+
+  <name>AutomaticIrrigationSystem</name>
+
+  <!-- ====================================================================== -->
+  <!-- = P R O P E R T I E S ================================================ -->
+  <!-- ====================================================================== -->
+
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <relativePath/>
+    <version>2.7.1</version> <!-- lookup parent from repository -->
+  </parent>
+
+  <!-- ==================================================================== -->
+  <!-- = D E P E N D E N C I E S - V E R S I O N ========================== -->
+  <!-- ==================================================================== -->
+
+  <properties>
+    <build.sourceEncoding>UTF-8</build.sourceEncoding>
+    <java.version>11</java.version>
+    <maven.version>[3.6,)</maven.version>
+  </properties>
+
+  <version>1.0.0</version>
+
+</project>

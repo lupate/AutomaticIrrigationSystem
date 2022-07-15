@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Plot.
+    -->
+    <changeSet author="" id="5">
+
+        <addForeignKeyConstraint baseColumnNames="sensor_id"
+          baseTableName="plot"
+          constraintName="fk_plot__sensor_id"
+          referencedColumnNames="id"
+          referencedTableName="sensor"/>
+    </changeSet>
+</databaseChangeLog>

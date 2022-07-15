@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+
+  <changeSet author="" id="10">
+    <loadData
+      file="/liquibase/data/sensor.csv"
+      separator=";"
+      tableName="sensor"
+      usePreparedStatements="true">
+      <column name="id" type="numeric"/>
+      <column name="code" type="string"/>
+      <column name="status" type="string"/>
+
+    </loadData>
+  </changeSet>
+
+  <changeSet author="" id="11">
+    <loadData
+      file="liquibase/data/plot.csv"
+      separator=";"
+      tableName="plot"
+      usePreparedStatements="true">
+      <column name="id" type="numeric"/>
+      <column name="code" type="string"/>
+      <column name="length" type="numeric"/>
+      <column name="width" type="numeric"/>
+      <column name="is_irrigated" type="boolean"/>
+      <column name="tries_count" type="numeric"/>
+      <column name="has_alert" type="boolean"/>
+      <column name="water_amount" type="numeric"/>
+      <column name="last_irrigation_time" type="string"/>
+      <column name="start_irrigation_time" type="string"/>
+      <column name="crop_type" type="string"/>
+      <column name="sensor_id" type="numeric"/>
+
+    </loadData>
+  </changeSet>
+
+
+  <changeSet author="" id="12">
+    <loadData
+      file="/liquibase/data/slot.csv"
+      separator=";"
+      tableName="slot"
+      usePreparedStatements="true">
+      <column name="id" type="numeric"/>
+      <column name="status" type="string"/>
+      <column name="plot_id" type="numeric"/>
+    </loadData>
+  </changeSet>
+</databaseChangeLog>

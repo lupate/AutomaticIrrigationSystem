@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <!--
+        Added the entity Slot.
+    -->
+    <changeSet author="" id="6">
+        <createTable tableName="slot">
+            <column name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="plot_id" type="bigint">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <!--
+    Added the constraints for entity Slot.
+-->
+    <changeSet author="" id="7">
+
+        <addForeignKeyConstraint baseColumnNames="plot_id"
+          baseTableName="slot"
+          constraintName="fk_slot__plot_id"
+          referencedColumnNames="id"
+          referencedTableName="plot"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <!--
+        Added the entity Plot.
+    -->
+    <changeSet author="" id="1">
+        <createTable tableName="plot">
+            <column name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="ux_plot__code"/>
+            </column>
+          <column name="length" type="double">
+            <constraints nullable="true"/>
+          </column>
+          <column name="width" type="double">
+            <constraints nullable="true"/>
+          </column>
+          <column defaultValue="false" name="is_irrigated" type="boolean">
+            <constraints nullable="true"/>
+          </column>
+          <column name="sensor_call_count" type="integer">
+            <constraints nullable="true"/>
+          </column>
+          <column name="last_sensor_call_time" type="varchar(255)">
+            <constraints nullable="true"/>
+          </column>
+          <column name="has_alert" type="boolean">
+            <constraints nullable="true"/>
+          </column>
+          <column name="water_amount" type="integer">
+            <constraints nullable="true"/>
+          </column>
+          <column name="last_irrigation_time" type="varchar(255)">
+            <constraints nullable="true"/>
+            </column>
+            <column name="start_irrigation_time" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="crop_type" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="sensor_id" type="bigint">
+                <constraints nullable="true" unique="true"
+                  uniqueConstraintName="ux_plot__sensor_id"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>

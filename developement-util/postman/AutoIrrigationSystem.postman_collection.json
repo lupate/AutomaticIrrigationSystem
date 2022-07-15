@@ -1,0 +1,421 @@
+{
+  "info": {
+    "_postman_id": "5646fa08-d580-4f6a-b7a9-7ff7bab9df0a",
+    "name": "AutoIrrigationSystem",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1029085"
+  },
+  "item": [
+    {
+      "name": "listAllPlots",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/plots",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createPlot",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/plots",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getOnePlot",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/plots/51",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots",
+            "51"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "configureOnePlot",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"cropType\": \"RICE\",\n    \"waterAmount\": 209,\n    \"slotsCount\": 20\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/plots/config/51",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots",
+            "config",
+            "51"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateOnePlot",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-10\",\n    \"plotLength\": 500.0,\n    \"plotWidth\": 50.0,\n    \"isIrrigated\": false, \n    \"hasAlert\": true,  \n    \"waterAmount\": 190\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/plots/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteOnePlot",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/plots/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "plots",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listAllSensors",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sensors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sensors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "attachSensor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sensors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sensors",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getOneSensor",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sensors/sensor-1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sensors",
+            "sensor-1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "startIrrigate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/irrigate/start/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "irrigate",
+            "start",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "endIrrigate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/irrigate/end/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "irrigate",
+            "end",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateSensorStatus",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sensors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sensors",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "monitorPlotsAlerts",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/alert",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "alert"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "fixPlotAlert",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"plotCode\": \"plot-110\",\n    \"plotLength\": 110.0,\n    \"plotWidth\": 110.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/alert/off/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "alert",
+            "off",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
